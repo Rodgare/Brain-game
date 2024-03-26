@@ -11,6 +11,11 @@
             "email": "axel19911@gmail.com"
         }
     ],
+    "description": "Mini, CLI Brain-game",
+    "license": "MIT",
     "minimum-stability": "stable",
-    "require": {}
+    "require": {},
+    "bin": [
+        "bin/brain-games"
+      ]
 }
