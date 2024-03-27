@@ -3,6 +3,7 @@
 namespace Brain\Games\GameEven;
 
 use Brain\Games\Cli;
+
 use function cli\line;
 use function cli\prompt;
 
@@ -11,7 +12,7 @@ function isEvenGame()
     $name = Cli\greeting();
     $answer = '';
     line('Answer "yes" if the number is even, otherwise answer "no".');
-    
+
     for ($i = 0; $i < 3; $i++) {
         $currentNumber = rand(1, 20);
         $correctAnswer = $currentNumber % 2 === 0 ? 'yes' : 'no';
@@ -30,7 +31,4 @@ function isEvenGame()
             line("Congratulations, {$name}!");
         }
     }
-
-
-
 }
