@@ -29,13 +29,15 @@ function greeting()
     return $name;
 }
 
-function compareAnswers($correctAnswer, $userAnswer)
+function compareAnswers($correctAnswer, $userAnswer, $userName)
 {
     if ($correctAnswer === $userAnswer) {
+        line("Your answer: {$userAnswer}");
         line("Correct!");
     } else {
+        line("Your answer: {$userAnswer}");
         line("'{$userAnswer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'");
-        line("Let's try again, {$userAnswer}!");
+        line("Let's try again, {$userName}!");
     }
 }
 
@@ -58,7 +60,7 @@ function cycle($userName, $gameName)
             $userAnswer = prompt("Question: {$operand1} {$operator} {$operand2}");
         }
 
-        compareAnswers($correctAnswer, $userAnswer);
+        compareAnswers($correctAnswer, $userAnswer, $userName);
 
         if ($correctAnswer !== $userAnswer) {
             break;
