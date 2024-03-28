@@ -41,6 +41,8 @@ function compareAnswers($correctAnswer, $userAnswer, $userName)
     }
 }
 
+
+
 function cycle($userName, $gameName)
 {
     $operatorsList = ['+', '-', '*'];
@@ -70,6 +72,7 @@ function cycle($userName, $gameName)
             $userAnswer = prompt("Question: {$divisibleNumber1} {$divisibleNumber2}");
         }
 
+        //Вычисление правильный ли ответ, и вывод соответствующих сообщений в консоль
         compareAnswers($correctAnswer, $userAnswer, $userName);
 
         if ($correctAnswer !== $userAnswer) {
