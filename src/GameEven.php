@@ -9,7 +9,7 @@ use function cli\prompt;
 
 function isEvenGame()
 {
-    $name = Cli\greeting();
+    $userName = Cli\greeting();
     $answer = '';
     line('Answer "yes" if the number is even, otherwise answer "no".');
 
@@ -24,11 +24,11 @@ function isEvenGame()
             line('Correct!');
         } else {
             line("'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.");
-            line("Let's try again, {$name}!");
+            line("Let's try again, {$userName}!");
             break;
         }
         if ($i === 2) {
-            line("Congratulations, {$name}!");
+            line("Congratulations, {$userName}!");
         }
     }
 }
