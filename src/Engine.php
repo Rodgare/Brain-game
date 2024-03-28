@@ -49,6 +49,7 @@ function cycle($userName, $gameName)
         $operand2 = rand(1, 20);
         $operator = $operatorsList[rand(0, 2)];
 
+        //Сюда ввести название игры и логику правильного ответа
         if ($gameName === 'brain-even') {
             $correctAnswer = $randomNumber % 2 === 0 ? 'yes' : 'no';
             $userAnswer = prompt("Question: {$randomNumber}");
