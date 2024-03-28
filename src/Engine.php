@@ -10,5 +10,5 @@ function calculate($operand1, $operand2, $operator)
         return $operand1 - $operand2;
     } elseif ($operator === '*') {
         return $operand1 * $operand2;
-}
+    }
 }

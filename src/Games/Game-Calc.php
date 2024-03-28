@@ -21,9 +21,9 @@ function Calc()
         $newOperator = $operator[rand(0, 2)];
         $correctAnswer = Engine\calculate($operand1, $operand2, $newOperator);
         $answer = prompt("Question: {$operand1} {$newOperator} {$operand2}");
-        if ((integer) $answer === $correctAnswer) {
+        if ((int) $answer === $correctAnswer) {
             line("Correct!");
-        }  else {
+        } else {
             line("'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'");
             line("Let's try again, {$userName}!");
             break;
