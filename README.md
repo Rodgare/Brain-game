@@ -3,4 +3,8 @@
 
 <a href="https://codeclimate.com/github/Rodgare/php-project-45/maintainability"><img src="https://api.codeclimate.com/v1/badges/3a2fa47ad64520c1e7fd/maintainability" /></a>
 
+### Brain-even:
 https://asciinema.org/a/4R2CO1xTJnVYlFULP2FGvOUdE
+
+### Brain-calc:
+https://asciinema.org/a/Q3OgrVOt3mlDF3uhxJ7YYMqzn
