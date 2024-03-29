@@ -12,5 +12,5 @@ function startGame()
 {
     $userName = Engine\greeting();
     line('What number is missing in the progression?');
-    Engine\cycle($userName, 'brain-progression');
+    Engine\gamesEngine($userName, 'brain-progression');
 }

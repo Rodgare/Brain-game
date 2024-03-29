@@ -13,5 +13,5 @@ function Calc()
     $userName = Engine\greeting();
     line("What is the result of the expression?");
 
-    Engine\cycle($userName, 'brain-calc');
+    Engine\gamesEngine($userName, 'brain-calc');
 }

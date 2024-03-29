@@ -61,7 +61,7 @@ function isPrime(int $number)
     return 'yes';
 }
 
-function cycle(string $userName, string $gameName)
+function gamesEngine(string $userName, string $gameName)
 {
     $operatorsList = ['+', '-', '*'];
     $correctAnswer = '';
@@ -98,6 +98,7 @@ function cycle(string $userName, string $gameName)
             for ($z = 0, $x = $start; $z < 10; $z++, $x += $step) {
                 $result[] = $x;
             }
+            
             $correctAnswer = (string) $result[$randomIndex];
             $result[$randomIndex] = '..';
             $string = implode(' ', $result);

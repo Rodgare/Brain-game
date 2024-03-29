@@ -13,5 +13,5 @@ function gcdGame()
     $userName = Engine\greeting();
     line('Find the greatest common divisor of given numbers.');
 
-    Engine\cycle($userName, 'brain-gcd');
+    Engine\gamesEngine($userName, 'brain-gcd');
 }

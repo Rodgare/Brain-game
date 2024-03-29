@@ -13,5 +13,5 @@ function isEvenGame()
     $userName = Engine\greeting();
     line('Answer "yes" if the number is even, otherwise answer "no".');
 
-    Engine\cycle($userName, 'brain-even');
+    Engine\gamesEngine($userName, 'brain-even');
 }
