@@ -5,7 +5,7 @@ namespace Brain\Games\Engine;
 use function cli\line;
 use function cli\prompt;
 
-function calculate($operand1, $operand2, $operator)
+function calculate(int $operand1, int $operand2, string $operator): string
 {
     $result = 0;
 
@@ -29,7 +29,7 @@ function greeting()
     return $name;
 }
 
-function compareAnswers($correctAnswer, $userAnswer, $userName)
+function compareAnswers(mixed $correctAnswer, mixed $userAnswer, string $userName)
 {
     if ($correctAnswer === $userAnswer) {
         line("Your answer: {$userAnswer}");
@@ -41,7 +41,7 @@ function compareAnswers($correctAnswer, $userAnswer, $userName)
     }
 }
 
-function isPrime($number)
+function isPrime(int $number)
 {
     if ($number <= 1) {
         return 'no';
@@ -61,9 +61,11 @@ function isPrime($number)
     return 'yes';
 }
 
-function cycle($userName, $gameName)
+function cycle(string $userName, string $gameName)
 {
     $operatorsList = ['+', '-', '*'];
+    $correctAnswer = '';
+    $userAnswer = '';
 
     for ($i = 0; $i < 3; $i++) {
         //brain-even

@@ -22,6 +22,11 @@ make install
 ## Run:
 ```bash
 make brain-game
+make brain-even
+make brain-calc
+make brain-gcd
+make brain-progression
+make brain-prime
 ```
 
 ### Brain-even:
