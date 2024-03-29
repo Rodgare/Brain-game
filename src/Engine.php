@@ -42,7 +42,6 @@ function compareAnswers($correctAnswer, $userAnswer, $userName)
 }
 
 
-
 function cycle($userName, $gameName)
 {
     $operatorsList = ['+', '-', '*'];
@@ -58,10 +57,7 @@ function cycle($userName, $gameName)
         $divisibleNumber2 = rand(4, 200);
         $operator = $operatorsList[rand(0, 2)];
         //brain-progression
-        $result = [];
-        $start = rand(2, 10);
-        $step = rand(2, 5);
-        $randomIndex = rand(0, 9);
+
 
         //Переменных с ответом пользователя ($userAnswer) и правильного ответа ($correctAnswer) в зависимости от игры
         if ($gameName === 'brain-even') {
@@ -79,6 +75,11 @@ function cycle($userName, $gameName)
             }
             $userAnswer = prompt("Question: {$divisibleNumber1} {$divisibleNumber2}");
         } elseif ($gameName === 'brain-progression') {
+            $result = [];
+            $start = rand(2, 10);
+            $step = rand(2, 5);
+            $randomIndex = rand(0, 9);
+
             for ($z = 0, $x = $start; $z < 10; $z++, $x += $step) {
                 $result[] = $x;
             }
