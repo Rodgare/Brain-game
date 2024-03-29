@@ -41,6 +41,25 @@ function compareAnswers($correctAnswer, $userAnswer, $userName)
     }
 }
 
+function isPrime($number)
+{
+    if ($number <= 1) {
+        return 'no';
+    }
+
+    if ($number % 2 === 0) {
+        return $number === 2 ? 'yes' : 'no';
+    }
+
+    $limit = (int) sqrt($number);
+    for ($i = 3; $i <= $limit; $i += 2) {
+        if ($number % $i === 0) {
+            return 'no';
+        }
+    }
+
+    return 'yes';
+}
 
 function cycle($userName, $gameName)
 {
@@ -56,8 +75,8 @@ function cycle($userName, $gameName)
         $divisibleNumber1 = rand(4, 200);
         $divisibleNumber2 = rand(4, 200);
         $operator = $operatorsList[rand(0, 2)];
-        //brain-progression
-
+        //brain-prime
+        $isPrimeRandomNumber = rand(2, 100);
 
         //Переменных с ответом пользователя ($userAnswer) и правильного ответа ($correctAnswer) в зависимости от игры
         if ($gameName === 'brain-even') {
@@ -87,6 +106,9 @@ function cycle($userName, $gameName)
             $result[$randomIndex] = '..';
             $string = implode(' ', $result);
             $userAnswer = prompt("Question: {$string}");
+        } elseif ($gameName === 'brain-prime') {
+            $userAnswer = prompt("Question: {$isPrimeRandomNumber}");
+            $correctAnswer = isPrime($isPrimeRandomNumber);
         }
 
         //Вычисление правильный ли ответ, и вывод соответствующих сообщений в консоль

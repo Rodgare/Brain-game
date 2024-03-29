@@ -10,5 +10,8 @@ use function cli\prompt;
 
 function startPrime()
 {
-    
+    $userName = Engine\greeting();
+    line('Answer "yes" if given number is prime. Otherwise answer "no".');
+
+    Engine\cycle($userName, 'brain-prime');
 }
