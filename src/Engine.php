@@ -98,7 +98,6 @@ function gamesEngine(string $userName, string $gameName)
             for ($z = 0, $x = $start; $z < 10; $z++, $x += $step) {
                 $result[] = $x;
             }
-            
             $correctAnswer = (string) $result[$randomIndex];
             $result[$randomIndex] = '..';
             $string = implode(' ', $result);
