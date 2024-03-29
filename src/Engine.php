@@ -48,14 +48,22 @@ function cycle($userName, $gameName)
     $operatorsList = ['+', '-', '*'];
 
     for ($i = 0; $i < 3; $i++) {
+        //brain-even
         $randomNumber = rand(1, 20);
+        //brain-gcd
         $randomNumber1 = rand(1, 20);
         $randomNumber2 = rand(1, 20);
+        //brain-calc
         $divisibleNumber1 = rand(4, 200);
         $divisibleNumber2 = rand(4, 200);
         $operator = $operatorsList[rand(0, 2)];
+        //brain-progression
+        $result = [];
+        $start = rand(2, 10);
+        $step = rand(2, 5);
+        $randomIndex = rand(0, 9);
 
-        //Значение переменных с ответом пользователя и правильного ответа в зависимости от названия игры
+        //Значение переменных с ответом пользователя ($userAnswer) и правильного ответа ($correctAnswer) в зависимости от названия игры
         if ($gameName === 'brain-even') {
             $correctAnswer = $randomNumber % 2 === 0 ? 'yes' : 'no';
             $userAnswer = prompt("Question: {$randomNumber}");
@@ -65,11 +73,19 @@ function cycle($userName, $gameName)
         } elseif ($gameName === 'brain-gcd') {
             $maxNum = max($divisibleNumber1, $divisibleNumber2);
             for ($y = 1; $y <= $maxNum; $y++) {
-                if ($divisibleNumber1 % $y === 0 && $divisibleNumber2 % $y === 0){
+                if ($divisibleNumber1 % $y === 0 && $divisibleNumber2 % $y === 0) {
                     $correctAnswer = (string) $y;
                 }
             }
             $userAnswer = prompt("Question: {$divisibleNumber1} {$divisibleNumber2}");
+        } elseif ($gameName === 'brain-progression') {
+            for ($z = 0, $x = $start; $z < 10; $z++, $x += $step) {
+                $result[] = $x;
+            }
+            $correctAnswer = (string) $result[$randomIndex];
+            $result[$randomIndex] = '..';
+            $string = implode(' ', $result);
+            $userAnswer = prompt("Question: {$string}");
         }
 
         //Вычисление правильный ли ответ, и вывод соответствующих сообщений в консоль
