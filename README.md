@@ -15,7 +15,7 @@ use <https://github.com/wp-cli/php-cli-tools/>
 ## Setup:
 ```bash
 git clone https://github.com/Rodgare/Brain-game
-cd php-project-45
+cd Brain-game
 make install
 ```
 
