@@ -63,7 +63,7 @@ function cycle($userName, $gameName)
         $step = rand(2, 5);
         $randomIndex = rand(0, 9);
 
-        //Значение переменных с ответом пользователя ($userAnswer) и правильного ответа ($correctAnswer) в зависимости от названия игры
+        //Переменных с ответом пользователя ($userAnswer) и правильного ответа ($correctAnswer) в зависимости от игры
         if ($gameName === 'brain-even') {
             $correctAnswer = $randomNumber % 2 === 0 ? 'yes' : 'no';
             $userAnswer = prompt("Question: {$randomNumber}");
