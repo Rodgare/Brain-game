@@ -28,4 +28,3 @@ function compareAnswers(mixed $correctAnswer, mixed $userAnswer, string $userNam
         line("Let's try again, {$userName}!");
     }
 }
-

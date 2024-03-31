@@ -28,7 +28,6 @@ function gameCalc()
             line("Congratulations, {$userName}!");
         }
     }
-    
 }
 
 function calculate(int $operand1, int $operand2, string $operator): string

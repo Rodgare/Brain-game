@@ -26,7 +26,6 @@ function gamePrime()
             line("Congratulations, {$userName}!");
         }
     }
-
 }
 
 function isPrime(int $number)
