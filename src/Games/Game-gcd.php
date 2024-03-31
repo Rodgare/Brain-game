@@ -12,6 +12,8 @@ function gameGcd()
 {
     $gameCondition = 'Find the greatest common divisor of given numbers.';
     $userName = Engine\greeting($gameCondition);
+    $correctAnswer = '';
+    $userAnswer = '';
 
     for ($i = 0; $i < 3; $i++) {
         $divisibleNumber1 = rand(4, 200);
