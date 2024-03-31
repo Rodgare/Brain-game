@@ -4,4 +4,4 @@
 require_once __DIR__ . '/../vendor/autoload.php';
 use Brain\Games\Games\Game\Prime;
 
-Prime\startPrime();
+Prime\gamePrime();

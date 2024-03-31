@@ -5,7 +5,7 @@
             "Hexlet\\Code\\": "src/"
         },
         "files": [
-            "src/Games/GameEven.php",
+            "src/Games/Game-Even.php",
             "src/Games/Game-Calc.php",
             "src/Engine.php",
             "src/Games/Game-gcd.php",
